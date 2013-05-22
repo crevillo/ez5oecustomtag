@@ -1,0 +1,11 @@
+parameters:
+    ezpublish.fieldType.ezxmltext.converter.customTag.class: Crevillo\EzOeCustomTagBundle\Core\FieldType\XmlText\Converter\CustomTag
+    ezpublish.fieldType.ezxmltext.converter.html5.resources: %kernel.root_dir%/../src/Crevillo/EzOeCustomTagBundle/Core/FieldType/XmlText/Input/Resources/stylesheets/eZXml2Html5.xsl
+
+services:
+    ezpublish.fieldType.ezxmltext.converter.customTag:
+        class: %ezpublish.fieldType.ezxmltext.converter.customTag.class%
+        arguments: [@templating]
+    ezpublish.fieldType.ezxmltext.converter.html5:
+        class: %ezpublish.fieldType.ezxmltext.converter.html5.class%
+        arguments: [%ezpublish.fieldType.ezxmltext.converter.html5.resources%, [@ezpublish.fieldType.ezxmltext.converter.embedToHtml5, @ezpublish.fieldType.ezxmltext.converter.ezLinkToHtml5,  @ezpublish.fieldType.ezxmltext.converter.customTag]]
