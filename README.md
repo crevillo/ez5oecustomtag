@@ -39,8 +39,8 @@ CustomAttributes[]=alto
 
 To show the related content in the new symfony stack you will need two things:
 
-* Provide a template called youtube.html.twig in the Resorcues/views/ezoe/customtags folder like [this](Resources/views/ezoe/customtags/youtube.html.twig)
-* Modify the [eZXml2Html5_custom.xsl] (Core/FieldType/XmlText/Input/Resources/stylesheets/eZXml2Html5_custom.xsl) and add a transformation for every custom tag you may have
+* Provide a template called youtube.html.twig in the Resorcues/views/ezoe/customtags folder like [this](Crevillo/EzOeCustomTagBundle/Resources/views/ezoe/customtags/youtube.html.twig)
+* Modify the [eZXml2Html5_custom.xsl] (Crevillo/EzOeCustomTagBundle/Core/FieldType/XmlText/Input/Resources/stylesheets/eZXml2Html5_custom.xsl) and add a transformation for every custom tag you may have
 
 Installation
 ------------
